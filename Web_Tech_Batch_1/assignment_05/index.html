@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment_05</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 35%;
+            margin-top: 8%;
+            background-color: black;
+        }
+        td {
+            background-color: pink;
+        }
+
+        table, th ,tr,td {
+            border: 3px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            
+        }
+
+        table{
+           
+            box-shadow: 0px 0px 35px 1px grey;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>Employee Code</td>
+                <td><input type="number" name="empcode"></td>
+            </tr>
+            <tr>
+                <td>Department</td>
+                <td>
+                    <input type="radio" id="admin" name="rbtn" value="admin">
+                    <label for="admin">Admin</label><br>
+                    <input type="radio" id="hr" name="rbtn" value="hr">
+                    <label for="hr">HR</label><br>
+                    <input type="radio" id="tech" name="rbtn" value="technical">
+                    <label for="tech">Technical</label><br>
+                    <input type="radio" id="Accounts" name="rbtn" value="Accounts">
+                    <label for="Accounts">Accounts</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Joining</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea name="addr" id="addr" rows="4" cols="40"></textarea></td>
+            </tr>
+            <tr>
+                <td>Training programs attended</td>
+                <td>
+                    <input type="checkbox" name="HTML" id="HTML" value="HTML">
+                    <label for="HTML">HTML/DHTML</label><br>
+                    <input type="checkbox" name="JAVA" id="JAVA" value="JAVA">
+                    <label for="JAVA">JAVA</label><br>
+                    <input type="checkbox" name="CLIENT" id="CLIENT" value="CLIENT">
+                    <label for="CLIENT">CLIENT/SERVER</label><br>
+                    <input type="checkbox" name="NET" id="NET" value="NET">
+                    <label for="NET">.NET</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Training Programmes need to attend</td>
+                <td>
+                    <select name="lang" id="lang" size="2">
+                        <option value="JAVASCRIPT">JAVASCRIPT</option>
+                        <option value="JSTRUTS">JSTRUTS</option>
+                        <option value="SPRINGBOOT">SPRINGBOOT</option>
+                        <option value="SERVLETS">SERVLETS</option>
+                        <option value="NODEJS">NODEJS</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Send the information at</td>
+                <td><a href="mailto:empinfo@patni.com">empinfo@patni.com</a></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+                <td><input type="reset" value="Reset"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
