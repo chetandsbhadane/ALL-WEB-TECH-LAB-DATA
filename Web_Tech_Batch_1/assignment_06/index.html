@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assign-6</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: black;
+        }
+        form{
+            border: 2px solid steelblue;
+            padding: 5px;
+            width: 50%;
+            margin-left: 500px;
+            margin-top: 10px;
+            background-color: pink;
+            box-shadow: 0px 0px 35px 1px grey;
+        }
+        td{
+            padding-bottom: 20px;
+            padding-right: 25px;
+        }
+        .div-center{
+            text-align: center;
+
+        }
+
+        .textareacls textarea{
+            margin-top: -34px;
+            resize: none;
+        }
+
+    </style>
+  </head>
+  <body>
+    <form action="">
+    <div>
+      <h2>Internet Usage Survey</h2>
+      <p>
+        This Survey is being conducted to help identify the internet usage
+        pattern of our customers. <br />
+        Please take a few moments to complete and submit this short form. Thank
+        you for your cooperation.
+      </p>
+    </div>
+
+    <div style="display: flex">
+      <div>
+        <table>
+          <tr>
+            <td>What type of internet connection do you have? <br>(Select One)</td>
+            <td>
+              <select name="conn" id="conn" size="4">
+                <option value="Dialup">Dial-up</option>
+                <option value="DSL">DSL</option>
+                <option selected value="HighSpeedCable">
+                  High Speed Cable
+                </option>
+                <option value="Other">Other</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>What type of computer do you use most at home?</td>
+            <td>
+              <input type="radio" id="desk" name="rbtn" value="desk" />
+              <label for="admin">Desktop</label>
+              <input type="radio" id="laptop" name="rbtn" value="laptop" />
+              <label for="hr">Laptop</label><br />
+            </td>
+          </tr>
+          <tr>
+            <td>How would you describe your main for using the Internet?</td>
+            <td>
+              <input type="radio" id="work" name="mbtn" value="admin" />
+              <label for="work">To do work-related activities</label><br />
+              <input type="radio" id="school" name="mbtn" value="school" />
+              <label for="school">To do school-related activities</label><br />
+              <input type="radio" id="enter" name="mbtn" value="enter" />
+              <label for="enter">For entertainment purpose</label><br />
+              <input type="radio" id="other" name="mbtn" value="other" />
+              <label for="other">Other activities</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <fieldset>
+                <legend>Types of sites visited</legend>
+                <p>
+                  What types of web sites do you access most often? <br />
+                  Check all that apply.
+                </p>
+                <br />
+                <input type="checkbox" name="selfe" id="selfe" value="selfe" />
+                <label for="selfe">Self Imporovement</label><br />
+                <input
+                  type="checkbox"
+                  name="Entertainment"
+                  id="Entertainment"
+                  value="Entertainment"
+                />
+                <label for="Entertainment">Entertainment</label><br />
+                <input type="checkbox" name="News" id="News" value="News" />
+                <label for="News">News and Sports</label><br />
+                <input
+                  type="checkbox"
+                  name="Reference"
+                  id="Reference"
+                  value="Reference"
+                />
+                <label for="Reference">Reference</label><br />
+                <input type="checkbox" name="Email" id="Email" value="Email" />
+                <label for="Email">Email</label><br />
+              </fieldset>
+            </td>
+            <td>
+              <fieldset>
+                <legend>Time spent using Internet</legend>
+                <p>
+                  During an average week, how long do you spend online?
+                </p><br>
+                <br />
+                <input type="radio" id="hour1" name="hours" value="0-3">
+                <label for="hour1">0-3 Hours</label><br>
+                <input type="radio" id="hour2" name="hours" value="4-6">
+                <label for="hour2">4-6 Hours</label><br>
+                <input type="radio" id="hour3" name="hours" value="7-10">
+                <label for="hour3">7-10 Hours</label><br>
+                <input type="radio" id="hour4" name="hours" value="11-14">
+                <label for="hour4">11-14 Hours</label><br>
+                <input type="radio" id="hour5" name="hours" value="15+">
+                <label for="hour5">15+ Hours</label>
+              </fieldset>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Please comment on your opinions concering Internet privacy and safety.</p></td>
+          </tr>
+          <tr>
+            <td class="textareacls">
+                <textarea name="privacy" id="privacy" rows="7" cols="60"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname">
+            </td>
+            <td> 
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname"></td>
+          </tr>
+          <tr>
+            <td>
+                <label for="age">Age:</label>
+                <input type="number" id="age"></td>
+            <td>
+                <label for="zip">Zip Code:</label>
+                <input type="number" id="zip"></td>
+            </td>
+          </tr>
+        </table>
+        <div class="div-center">
+            <td><input type="submit" value="Click to submit"></td>
+            <td ><input style="margin-left: 20px;" type="reset" value="Clear Form"></td>
+        </div>
+
+      </div>
+    </div> 
+    </form>
+  </body>
+</html>

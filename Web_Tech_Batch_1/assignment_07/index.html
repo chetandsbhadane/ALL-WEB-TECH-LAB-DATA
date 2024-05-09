@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assign-07</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .tbl {
+        width: 600px;
+        height: 400px;
+        margin-left: 670px;
+        margin-top: 180px;
+        border-collapse: collapse;
+        border: 3px solid gray;
+        box-shadow: 0px 0px 50px 5px grey;
+      }
+
+      tr,
+      td {
+        border: 3px solid gray;
+      }
+
+      .tbl th:only-child {
+        background-color: yellow;
+      }
+
+      .tbl tr th {
+        background-color: fuchsia;
+      }
+
+      .tbl tr:nth-child(3) td:nth-child(6) {
+        background-color: yellow;
+      }
+
+      .tbl td:last-child {
+        background-color: aqua;
+      }
+
+      tr:nth-child(3) td:first-child {
+        background-color: white;
+      }
+
+      .tbl td:first-child {
+        background-color: green;
+      }
+
+      .tbl tr:nth-child(7) td:nth-child(3) {
+        background-color: yellow;
+      }
+
+      tr:nth-child(8) td:last-child {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <table style="background-color: white" border="2px" class="tbl">
+      <tr>
+        <th colspan="7">January</th>
+      </tr>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>
