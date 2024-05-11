@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>problem_01</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 10px;
+            font-size: larger;
+        }
+
+        form{
+            width: 40%;
+        }
+
+        label,input{
+            margin: 0px 10px 0px 5px;
+            margin-bottom: 15px;
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <h1>Appointment Scheduler</h1>
+    <form action="">
+      <div>
+        <fieldset>
+          <legend>Personal information</legend>
+          <label for="name">Name</label><br />
+          <input type="text" id="name" name="name" /><br />
+          <label for="Telephone">Telephone Number</label><br />
+          <input type="number" id="Telephone" name="Telephone" /><br />
+          <label for="mail">E-mail address</label><br />
+          <input type="email" id="mail" name="mail" /><br>
+          <label for="dob">Date of birth</label><br>
+          <input type="date" name="dob" id="dob">
+        </fieldset>
+        <fieldset>
+            <legend>Appointment Request</legend>
+            <label for="name">What is the reason for your visit?</label><br />
+            <input type="text" id="name" name="name" /><br />
+            <label for="">Current pain level</label><br>
+            <input type="range" name="level" id="level"><br>
+            <label for="preferreddate">Preferred date</label><br>
+            <input type="date" name="preferreddate" id="preferreddate"><br>
+            <label for="preferredtime">preferred time </label><br>
+            <input type="time" name="preferredtime" id="preferredtime">
+          </fieldset>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assign09-problem02</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 10px;
+            background-color: steelblue;
+            color: white;
+            font-size: larger;
+        }
+
+        fieldset{
+            width: 50%;
+            margin-left: 25%;
+            margin-top: 10%;
+        }
+
+        tr, td {
+            padding-bottom: 20px;
+        }
+
+        td:first-child{
+            float: right;
+            padding-right: 20px;
+        }
+
+        input{
+            border-radius: 5px;
+            padding: 5px;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <div>
+      <fieldset>
+        <legend>Registration Details</legend>
+        <table>
+          <tr>
+            <td>University:</td>
+            <td><input type="text" name="uni" id="uni" /></td>
+          </tr>
+          <tr>
+            <td>Institute:</td>
+            <td><input type="text" name="uni" id="uni" /></td>
+          </tr>
+          <tr>
+            <td>Branch:</td>
+            <td>
+              <select name="branch" id="branch">
+                <option value="" selected disabled>--select--</option>
+                <option value="CSE">CSE</option>
+                <option value="IT">IT</option>
+                <option value="MECH">MECH</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Degree</td>
+            <td>
+              <select name="degree" id="degree">
+                <option value="" selected disabled>--select--</option>
+                <option value="BE">BE</option>
+                <option value="BTECH">BTECH</option>
+                <option value="MTECH">MTECH</option>
+              </select>
+
+              <input type="radio" name="pursuing" id="pursuing" />
+              <label for="pursuing">Pursuing</label>
+              <input type="radio" name="completed" id="completed" />
+              <label for="pursuing">Completed</label>
+            </td>
+          </tr>
+          <tr>
+            <td>Average CPI:</td>
+            <td>
+              <input type="number" name="cpi" id="cpi" />
+              Upto
+              <input type="number" name="sem" id="sem" />
+              Th Semester
+            </td>
+          </tr>
+          <tr>
+            <td>Experience:</td>
+            <td><input type="number" name="exp" id="exp" /></td>
+          </tr>
+          <tr>
+            <td>Your Website Or Blog:</td>
+            <td>
+              <input
+                type="text"
+                name="website"
+                id="website"
+                placeholder="http://"
+              />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </div>
+  </body>
+</html>
