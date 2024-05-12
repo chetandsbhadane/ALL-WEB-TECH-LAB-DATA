@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro-02</title>
+
+    <script>
+        function print() {
+            document.getElementById("printtext").innerHTML = "";
+            var num = document.getElementById("num").value;
+            var msg = document.getElementById("msg").value;
+            for (var i = 0; i < num; i++) {
+                document.getElementById("printtext").innerHTML += msg + "<br>";
+            }
+            document.getElementById("num").value = "";
+            document.getElementById("msg").value = "";
+        }
+    </script>
+
+</head>
+<body>
+    <form action="">
+    <table>
+        <tr>
+        <td><label for="num">Enter Integer</label></td>
+        <td><input type="number" name="num" id="num"></td>
+        </tr>
+        <tr>
+            <td><label for="msg">Enter message to print</label></td>
+            <td><input type="text" name="msg" id="msg"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="print" onclick="print()"></td>
+        </tr>
+    </table>
+</form>
+<h2 id="printtext"></h2>
+</body>
+</html>

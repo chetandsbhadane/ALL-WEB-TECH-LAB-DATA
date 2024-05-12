@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pro-06</title>
+    <script>
+      function myFunction() {
+        var num = parseInt(document.getElementById("num").value);
+        var sum = 0;
+        if (isNaN(num)) {
+            document.getElementById("mydiv").innerHTML = "";
+          alert("Please enter a number");
+          
+        } else {
+          while (num != 0) {
+            rem = parseInt(num) % 10;
+            sum = parseInt(sum) + parseInt(rem);
+            num = parseInt(num) / 10;
+          }
+          document.getElementById("mydiv").innerHTML = parseInt(sum);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Enter 5 digit number:
+    <input type="number" name="num" id="num" /><br />
+    <input type="button" value="Find the sum" onclick="myFunction()" />
+
+    <div id="mydiv"></div>
+  </body>
+</html>

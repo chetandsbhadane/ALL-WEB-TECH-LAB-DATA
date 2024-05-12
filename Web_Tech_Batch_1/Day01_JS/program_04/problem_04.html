@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pro - 4</title>
+
+    <script>
+        function cal(e) {
+        console.log(e)
+            e.preventDefault();
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            console.log(num1);
+            var key = e.submitter.id;
+            switch(key){
+                case "+":
+                    document.getElementById("result").innerHTML = (num1) + parseInt(num2);
+                    break;
+                case "-":
+                    document.getElementById("result").innerHTML = (num1) - parseInt(num2);
+                    break;
+                case "*":
+                    document.getElementById("result").innerHTML = (num1) * parseInt(num2);
+                    break;
+                case "/": 
+                    document.getElementById("result").innerHTML = (num1) / parseInt(num2);
+                    break;
+            }
+            console.log(key);
+            console.log(e);
+        }
+    </script>
+</head>
+<body>
+    <form action="" onsubmit="return cal(event)">
+    <label for="num1">Number 1:</label>
+    <input type="number" name="num1" id="num1"><br>
+    
+    <label for="num1">Number 2:</label>
+    <input type="number" name="num1" id="num2"><br>
+
+    <input type="submit" value="+" id="+" >
+    <input type="submit" value="-" id="-">
+    <input type="submit" value="*" id="*">
+    <input type="submit" value="/" id="/"><br>
+</form>
+    <div id="result"></div>
+</body>
+</html>

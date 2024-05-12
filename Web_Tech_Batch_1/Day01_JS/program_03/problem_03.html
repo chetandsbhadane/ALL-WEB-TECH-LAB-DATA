@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pro-3</title>
+
+    <script>
+        function printEven(){
+            var num = document.getElementById("num").value;
+            var i=2;
+            while(i<=num){
+                if(i%2==0){
+                    document.getElementById("printeven").innerHTML += i + "<br>";
+                }
+                i = i + 1;
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="num">Enter number:</label>
+    <input type="number" name="num" id="num"><br>
+ 
+    <input type="button" value="submit" onclick="printEven()">
+    <h3 id="printeven"></h3>
+</body>
+</html>
