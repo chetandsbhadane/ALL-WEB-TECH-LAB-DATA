@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro - 12</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var arr = [];
+      $(document).ready(function () {
+        $("#insert").click(function () {
+          let name = $("#empname").val();
+          arr.push(name);
+          $("#empname").val(""); // Clear the input field
+
+          //   $("#mydiv").html(arr);
+        });
+
+        $("#dis").click(function () {
+            $("#nameTable").html(" ");
+            
+          let table = $("#nameTable");
+          // Create table header row
+          table.append("<tr><th>Name</th></tr>");
+
+          // Loop through namesArray and add rows to the table
+          for (let i = 0; i < arr.length; i++) {
+            let name = arr[i];
+            table.append("<tr><td>" + name + "</td></tr>");
+          }
+        });
+
+       
+        $("#sortbyname").click(function () {
+            $("#nameTable").html(" ");
+          
+            arr.sort();
+          let table = $("#nameTable");
+          table.append("<p>Sorted By Name</p>");
+          // Create table header row
+          table.append("<tr><th>Name</th></tr>");
+
+          // Loop through namesArray and add rows to the table
+          for (let i = 0; i < arr.length; i++) {
+            let name = arr[i];
+            table.append("<tr><td>" + name + "</td></tr>");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form action="">
+      <table>
+        <tr>
+          <td><input type="text" name="empname" id="empname" /></td>
+        </tr>
+        <tr>
+          <td><input id="insert" type="button" value="Insert" /></td>
+          <td><input id="sortbyname" type="button" value="sort" /></td>
+          <td><input id="dis" type="button" value="display" /></td>
+        </tr>
+      </table>
+    </form>
+
+    <div id="mydiv">
+      <table id="nameTable"></table>
+    </div>
+  </body>
+</html>

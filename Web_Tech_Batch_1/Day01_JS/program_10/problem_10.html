@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro - 10</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const date = new Date();
+      let day = date.getDate();
+      let year = date.getFullYear();
+      const month = date.toLocaleString('default', { month: 'long' });
+      let weekday = date.toLocaleDateString('default', { weekday: 'long' });  
+
+      $(document).ready(function () {
+        $("#para").html("Today is "+ weekday + ", " + day + " " +month + " " + year + ", " + "Welcome, and Good Afternoon to You. <br>");
+   
+        var actualDate = new Date()
+        var eoYear = new Date(actualDate.getFullYear(),12,0)
+        var milliseconds = eoYear.getTime();
+        var days = ((milliseconds-Date.now()) / 86400000);
+  
+        $('#para2').html("Number of days left till end of year: " + parseInt(days));
+       
+      });
+    </script>
+  </head>
+  <body>
+    <p id="para"></p>
+    <p id="para2"></p>
+
+  </body>
+</html>
