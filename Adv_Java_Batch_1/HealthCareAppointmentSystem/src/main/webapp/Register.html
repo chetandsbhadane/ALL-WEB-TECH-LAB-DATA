@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Appointment Schedule</title>
+</head>
+<body>
+	<form action="patient_register" method="post">
+		<table style="background-color: lightgrey; margin: auto">
+			<tr>
+				<td>Enter Patient's First Name</td>
+				<td><input type="text" name="fn" /></td>
+			</tr>
+			<tr>
+				<td>Enter Patient's Last Name</td>
+				<td><input type="text" name="ln" /></td>
+			</tr>
+			<tr>
+				<td>Enter Patient's Voter Email</td>
+				<td><input type="email" name="em" /></td>
+			</tr>
+			<tr>
+				<td>Enter Patient's Password</td>
+				<td><input type="password" name="pass" /></td>
+			</tr>
+			<tr>
+				<td>Enter Role</td>
+				<td>
+					Admin<input type="radio" name="role" value="admin"/>
+					Patient<input type="radio" name="role" value="patient"/>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Patient Register" /></td>
+				<td><a href="login.html"><input type="button" value="Back to Login" /></a></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
