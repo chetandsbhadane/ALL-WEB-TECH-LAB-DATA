@@ -1,26 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css"
-import {Routes,Route} from 'react-router-dom'
-import Header from './components/Header';
-import Footer from './components/Footer';
-import MainNavBar from './components/MainNavBar';
-import ProductTable from './pages/ProductTable';
-import HomeComponent from './pages/HomeComponent';
-import ProductList from './pages/ProductList';
-import ProductForm from './pages/ProductForm';
+import { useState } from "react";
+import HelloComponenet from "./component/HelloComponenet";
+
 function App() {
+
+  let data = [ {"username":"chetan","password":1234 } ]
+  let [increament,setIncrement] = useState(0);
+
+  let btnIncreament =()=>{
+    if(increament>=0)
+      setIncrement(increament+1);
+  }
+
+  let btnDecreament =()=>{
+    if(increament>0)
+      setIncrement(increament-1);
+  }
+
+  const [changeColor, setChangeColor] = useState({});
+  let prevColor = changeColor.color
+  console.log("prev color " + prevColor);
+  const btnChange = () => {
+    setChangeColor({color:"Black"});
+    if(prevColor == "White"){
+     
+      document.body.style.backgroundColor = 'White';
+      setChangeColor({color:"Black"});
+    }
+    if(prevColor == "Black"){
+      document.body.style.backgroundColor = 'Black';
+      setChangeColor({color:"White"});
+    }
+    
+  };
+
+  console.log("hello " + btnDecreament);
   return (
-    <div>
-    <Header></Header>
-    <MainNavBar></MainNavBar>
-    <Routes>
-      <Route path="/" element={<HomeComponent></HomeComponent>}></Route>
-      <Route path="/table" element={<ProductTable></ProductTable>}></Route>
-      <Route path="/list" element={<ProductList></ProductList>}></Route>
-      <Route path="/form" element={<ProductForm></ProductForm>}></Route>
-    </Routes>
-    <Footer></Footer>
+    <div className="App" style={changeColor}>
+      <h2>Hello first program!</h2>
+      <HelloComponenet data2={data[0]}></HelloComponenet>
+      <button onClick={btnIncreament}>Increament</button>
+      <h2>{increament}</h2>
+      <button onClick={btnDecreament}>Decreament</button>
+      <button onClick={btnChange}>Change</button>
     </div>
   );
 }
